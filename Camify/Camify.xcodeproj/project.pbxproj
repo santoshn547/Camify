@@ -1,0 +1,719 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53E6FD174C1F93FE9206D5D1 /* Pods_CamifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09E75AC9895CB93644CE5F7 /* Pods_CamifyTests.framework */; };
+		AA54592721B18A0B00E0922F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA54592621B18A0B00E0922F /* AppDelegate.swift */; };
+		AA54592C21B18A0B00E0922F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA54592A21B18A0B00E0922F /* Main.storyboard */; };
+		AA54592E21B18A0B00E0922F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA54592D21B18A0B00E0922F /* Assets.xcassets */; };
+		AA54593121B18A0B00E0922F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA54592F21B18A0B00E0922F /* LaunchScreen.storyboard */; };
+		AA54593C21B18A0B00E0922F /* CamifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA54593B21B18A0B00E0922F /* CamifyTests.swift */; };
+		AA54594721B18A0B00E0922F /* CamifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA54594621B18A0B00E0922F /* CamifyUITests.swift */; };
+		AA54595921B196EB00E0922F /* PreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA54595821B196EB00E0922F /* PreviewVC.swift */; };
+		AAE4FC6B21B56920004985AB /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4FC6A21B56920004985AB /* PickerViewController.swift */; };
+		AAE4FC6F21B93E9E004985AB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4FC6E21B93E9E004985AB /* Extensions.swift */; };
+		AAE4FC7121B97879004985AB /* CustomAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4FC7021B97879004985AB /* CustomAlbum.swift */; };
+		B0EB0F8A24A06CD103E656D1 /* Pods_Camify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E3F3E2DEE0BCEBD05201AF /* Pods_Camify.framework */; };
+		DF696F16C0594D51D6A02BE0 /* Pods_CamifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71F141E923AB61852749B55 /* Pods_CamifyUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA54593821B18A0B00E0922F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA54591B21B18A0A00E0922F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA54592221B18A0B00E0922F;
+			remoteInfo = Camify;
+		};
+		AA54594321B18A0B00E0922F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA54591B21B18A0A00E0922F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA54592221B18A0B00E0922F;
+			remoteInfo = Camify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E2AC355E9ABB6A2807406A3 /* Pods-Camify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camify.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Camify/Pods-Camify.debug.xcconfig"; sourceTree = "<group>"; };
+		17E3F3E2DEE0BCEBD05201AF /* Pods_Camify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Camify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26DEC01D4D1080394C014D8F /* Pods-CamifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamifyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CamifyTests/Pods-CamifyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2DC51387E42FE4A96D111D01 /* Pods-CamifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamifyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CamifyUITests/Pods-CamifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7A3BEDB516DE0077A47C1CBC /* Pods-CamifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamifyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CamifyTests/Pods-CamifyTests.release.xcconfig"; sourceTree = "<group>"; };
+		825DE8FF86E33AE767886428 /* Pods-CamifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CamifyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CamifyUITests/Pods-CamifyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AA54592321B18A0B00E0922F /* Camify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Camify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA54592621B18A0B00E0922F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA54592B21B18A0B00E0922F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA54592D21B18A0B00E0922F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA54593021B18A0B00E0922F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA54593221B18A0B00E0922F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA54593721B18A0B00E0922F /* CamifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA54593B21B18A0B00E0922F /* CamifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamifyTests.swift; sourceTree = "<group>"; };
+		AA54593D21B18A0B00E0922F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA54594221B18A0B00E0922F /* CamifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CamifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA54594621B18A0B00E0922F /* CamifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamifyUITests.swift; sourceTree = "<group>"; };
+		AA54594821B18A0B00E0922F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA54595821B196EB00E0922F /* PreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewVC.swift; sourceTree = "<group>"; };
+		AAE4FC6A21B56920004985AB /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		AAE4FC6E21B93E9E004985AB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AAE4FC7021B97879004985AB /* CustomAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlbum.swift; sourceTree = "<group>"; };
+		D09E75AC9895CB93644CE5F7 /* Pods_CamifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CamifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFDBD8167E5A9978D1D81C6C /* Pods-Camify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Camify/Pods-Camify.release.xcconfig"; sourceTree = "<group>"; };
+		F71F141E923AB61852749B55 /* Pods_CamifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CamifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA54592021B18A0B00E0922F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0EB0F8A24A06CD103E656D1 /* Pods_Camify.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA54593421B18A0B00E0922F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53E6FD174C1F93FE9206D5D1 /* Pods_CamifyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA54593F21B18A0B00E0922F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF696F16C0594D51D6A02BE0 /* Pods_CamifyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9979ACDEC3A29D33213F284E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17E3F3E2DEE0BCEBD05201AF /* Pods_Camify.framework */,
+				D09E75AC9895CB93644CE5F7 /* Pods_CamifyTests.framework */,
+				F71F141E923AB61852749B55 /* Pods_CamifyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA54591A21B18A0A00E0922F = {
+			isa = PBXGroup;
+			children = (
+				AA54592521B18A0B00E0922F /* Camify */,
+				AA54593A21B18A0B00E0922F /* CamifyTests */,
+				AA54594521B18A0B00E0922F /* CamifyUITests */,
+				AA54592421B18A0B00E0922F /* Products */,
+				E66FC93CF4321F7C300B34E6 /* Pods */,
+				9979ACDEC3A29D33213F284E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AA54592421B18A0B00E0922F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA54592321B18A0B00E0922F /* Camify.app */,
+				AA54593721B18A0B00E0922F /* CamifyTests.xctest */,
+				AA54594221B18A0B00E0922F /* CamifyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA54592521B18A0B00E0922F /* Camify */ = {
+			isa = PBXGroup;
+			children = (
+				AA54592621B18A0B00E0922F /* AppDelegate.swift */,
+				AAE4FC6E21B93E9E004985AB /* Extensions.swift */,
+				AA54592A21B18A0B00E0922F /* Main.storyboard */,
+				AAE4FC7021B97879004985AB /* CustomAlbum.swift */,
+				AA54592D21B18A0B00E0922F /* Assets.xcassets */,
+				AA54595821B196EB00E0922F /* PreviewVC.swift */,
+				AA54592F21B18A0B00E0922F /* LaunchScreen.storyboard */,
+				AA54593221B18A0B00E0922F /* Info.plist */,
+				AAE4FC6A21B56920004985AB /* PickerViewController.swift */,
+			);
+			path = Camify;
+			sourceTree = "<group>";
+		};
+		AA54593A21B18A0B00E0922F /* CamifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA54593B21B18A0B00E0922F /* CamifyTests.swift */,
+				AA54593D21B18A0B00E0922F /* Info.plist */,
+			);
+			path = CamifyTests;
+			sourceTree = "<group>";
+		};
+		AA54594521B18A0B00E0922F /* CamifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AA54594621B18A0B00E0922F /* CamifyUITests.swift */,
+				AA54594821B18A0B00E0922F /* Info.plist */,
+			);
+			path = CamifyUITests;
+			sourceTree = "<group>";
+		};
+		E66FC93CF4321F7C300B34E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E2AC355E9ABB6A2807406A3 /* Pods-Camify.debug.xcconfig */,
+				EFDBD8167E5A9978D1D81C6C /* Pods-Camify.release.xcconfig */,
+				26DEC01D4D1080394C014D8F /* Pods-CamifyTests.debug.xcconfig */,
+				7A3BEDB516DE0077A47C1CBC /* Pods-CamifyTests.release.xcconfig */,
+				2DC51387E42FE4A96D111D01 /* Pods-CamifyUITests.debug.xcconfig */,
+				825DE8FF86E33AE767886428 /* Pods-CamifyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA54592221B18A0B00E0922F /* Camify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA54594B21B18A0B00E0922F /* Build configuration list for PBXNativeTarget "Camify" */;
+			buildPhases = (
+				5B2B4EE2655A63B0C894C8A1 /* [CP] Check Pods Manifest.lock */,
+				AA54591F21B18A0B00E0922F /* Sources */,
+				AA54592021B18A0B00E0922F /* Frameworks */,
+				AA54592121B18A0B00E0922F /* Resources */,
+				1CCA5A73D345995730736C72 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Camify;
+			productName = Camify;
+			productReference = AA54592321B18A0B00E0922F /* Camify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA54593621B18A0B00E0922F /* CamifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA54594E21B18A0B00E0922F /* Build configuration list for PBXNativeTarget "CamifyTests" */;
+			buildPhases = (
+				AE1A49DA64147767B65BD058 /* [CP] Check Pods Manifest.lock */,
+				AA54593321B18A0B00E0922F /* Sources */,
+				AA54593421B18A0B00E0922F /* Frameworks */,
+				AA54593521B18A0B00E0922F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA54593921B18A0B00E0922F /* PBXTargetDependency */,
+			);
+			name = CamifyTests;
+			productName = CamifyTests;
+			productReference = AA54593721B18A0B00E0922F /* CamifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AA54594121B18A0B00E0922F /* CamifyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA54595121B18A0B00E0922F /* Build configuration list for PBXNativeTarget "CamifyUITests" */;
+			buildPhases = (
+				BEDFA6664EF0DAE5F26CFAD6 /* [CP] Check Pods Manifest.lock */,
+				AA54593E21B18A0B00E0922F /* Sources */,
+				AA54593F21B18A0B00E0922F /* Frameworks */,
+				AA54594021B18A0B00E0922F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA54594421B18A0B00E0922F /* PBXTargetDependency */,
+			);
+			name = CamifyUITests;
+			productName = CamifyUITests;
+			productReference = AA54594221B18A0B00E0922F /* CamifyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA54591B21B18A0A00E0922F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = iwabsolutions;
+				TargetAttributes = {
+					AA54592221B18A0B00E0922F = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+					};
+					AA54593621B18A0B00E0922F = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AA54592221B18A0B00E0922F;
+					};
+					AA54594121B18A0B00E0922F = {
+						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AA54592221B18A0B00E0922F;
+					};
+				};
+			};
+			buildConfigurationList = AA54591E21B18A0A00E0922F /* Build configuration list for PBXProject "Camify" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA54591A21B18A0A00E0922F;
+			productRefGroup = AA54592421B18A0B00E0922F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA54592221B18A0B00E0922F /* Camify */,
+				AA54593621B18A0B00E0922F /* CamifyTests */,
+				AA54594121B18A0B00E0922F /* CamifyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA54592121B18A0B00E0922F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA54593121B18A0B00E0922F /* LaunchScreen.storyboard in Resources */,
+				AA54592E21B18A0B00E0922F /* Assets.xcassets in Resources */,
+				AA54592C21B18A0B00E0922F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA54593521B18A0B00E0922F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA54594021B18A0B00E0922F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1CCA5A73D345995730736C72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Camify/Pods-Camify-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Camify/Pods-Camify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B2B4EE2655A63B0C894C8A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Camify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE1A49DA64147767B65BD058 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CamifyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEDFA6664EF0DAE5F26CFAD6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CamifyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA54591F21B18A0B00E0922F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAE4FC6F21B93E9E004985AB /* Extensions.swift in Sources */,
+				AAE4FC7121B97879004985AB /* CustomAlbum.swift in Sources */,
+				AA54592721B18A0B00E0922F /* AppDelegate.swift in Sources */,
+				AA54595921B196EB00E0922F /* PreviewVC.swift in Sources */,
+				AAE4FC6B21B56920004985AB /* PickerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA54593321B18A0B00E0922F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA54593C21B18A0B00E0922F /* CamifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA54593E21B18A0B00E0922F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA54594721B18A0B00E0922F /* CamifyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA54593921B18A0B00E0922F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA54592221B18A0B00E0922F /* Camify */;
+			targetProxy = AA54593821B18A0B00E0922F /* PBXContainerItemProxy */;
+		};
+		AA54594421B18A0B00E0922F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA54592221B18A0B00E0922F /* Camify */;
+			targetProxy = AA54594321B18A0B00E0922F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA54592A21B18A0B00E0922F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA54592B21B18A0B00E0922F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AA54592F21B18A0B00E0922F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA54593021B18A0B00E0922F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA54594921B18A0B00E0922F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA54594A21B18A0B00E0922F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA54594C21B18A0B00E0922F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E2AC355E9ABB6A2807406A3 /* Pods-Camify.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54QH464WRG;
+				INFOPLIST_FILE = Camify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iwabsolutions.Camify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA54594D21B18A0B00E0922F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFDBD8167E5A9978D1D81C6C /* Pods-Camify.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 54QH464WRG;
+				INFOPLIST_FILE = Camify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iwabsolutions.Camify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA54594F21B18A0B00E0922F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26DEC01D4D1080394C014D8F /* Pods-CamifyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CamifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iwabsolutions.CamifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Camify.app/Camify";
+			};
+			name = Debug;
+		};
+		AA54595021B18A0B00E0922F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A3BEDB516DE0077A47C1CBC /* Pods-CamifyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CamifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iwabsolutions.CamifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Camify.app/Camify";
+			};
+			name = Release;
+		};
+		AA54595221B18A0B00E0922F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DC51387E42FE4A96D111D01 /* Pods-CamifyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CamifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iwabsolutions.CamifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Camify;
+			};
+			name = Debug;
+		};
+		AA54595321B18A0B00E0922F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 825DE8FF86E33AE767886428 /* Pods-CamifyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = CamifyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.iwabsolutions.CamifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Camify;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA54591E21B18A0A00E0922F /* Build configuration list for PBXProject "Camify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA54594921B18A0B00E0922F /* Debug */,
+				AA54594A21B18A0B00E0922F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA54594B21B18A0B00E0922F /* Build configuration list for PBXNativeTarget "Camify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA54594C21B18A0B00E0922F /* Debug */,
+				AA54594D21B18A0B00E0922F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA54594E21B18A0B00E0922F /* Build configuration list for PBXNativeTarget "CamifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA54594F21B18A0B00E0922F /* Debug */,
+				AA54595021B18A0B00E0922F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA54595121B18A0B00E0922F /* Build configuration list for PBXNativeTarget "CamifyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA54595221B18A0B00E0922F /* Debug */,
+				AA54595321B18A0B00E0922F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA54591B21B18A0A00E0922F /* Project object */;
+}

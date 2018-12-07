@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DX0-gM-3OO">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PreviewVC-->
+        <scene sceneID="HRx-Wg-w6M">
+            <objects>
+                <viewController storyboardIdentifier="PreviewVC" id="mxC-9w-NeF" customClass="PreviewVC" customModule="Camify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="adC-5d-4Qi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cTW-7o-iQT">
+                                <rect key="frame" x="0.0" y="94" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEd-3O-EK6">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </scrollView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="XIY-If-Y1U">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gAs-qD-onT">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsc-uo-3ws">
+                                <rect key="frame" x="0.0" y="452" width="320" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ile-fW-NVa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2E8-Fd-xBO">
+                                        <rect key="frame" x="233" y="32" width="71" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="savePicButton:" destination="mxC-9w-NeF" eventType="touchUpInside" id="9W4-Uj-wdm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-99-V3A">
+                                        <rect key="frame" x="8" y="32" width="84" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButton:" destination="mxC-9w-NeF" eventType="touchUpInside" id="mUE-u1-PBi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16470588235294117" green="0.16078431372549018" blue="0.16078431372549018" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Grt-RN-aBW">
+                                <rect key="frame" x="0.0" y="413" width="320" height="37"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="pageChanged:" destination="mxC-9w-NeF" eventType="valueChanged" id="FaL-c9-HMP"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="buP-fT-gUq"/>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="cTW-7o-iQT" id="bjR-rI-Kjv"/>
+                        <outlet property="filtersScrollView" destination="Jsc-uo-3ws" id="KqD-xS-bd3"/>
+                        <outlet property="imageScrollView" destination="hEd-3O-EK6" id="X9W-aD-P4i"/>
+                        <outlet property="imageToFilter" destination="gAs-qD-onT" id="bUP-pS-0AQ"/>
+                        <outlet property="originalImage" destination="XIY-If-Y1U" id="CGS-bZ-9IY"/>
+                        <outlet property="pageControl" destination="Grt-RN-aBW" id="zy0-mi-mew"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2yW-de-MsN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2438" y="37"/>
+        </scene>
+        <!--Picker View Controller-->
+        <scene sceneID="3YE-XH-spP">
+            <objects>
+                <viewController storyboardIdentifier="PickerViewController" id="DX0-gM-3OO" customClass="PickerViewController" customModule="Camify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M9f-x3-EA3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iMu-3i-UC0">
+                                <rect key="frame" x="158" y="188" width="46" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="pick:" destination="DX0-gM-3OO" eventType="touchUpInside" id="sQ0-yN-X23"/>
+                                    <action selector="savePicButton:" destination="mxC-9w-NeF" eventType="touchUpInside" id="B6W-jN-9Qs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WzW-au-2Cf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mVP-tD-f2I"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7bz-Vc-X6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1755" y="37"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo" width="3264" height="2448"/>
+    </resources>
+</document>
