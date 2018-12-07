@@ -41,7 +41,7 @@ class PickerViewController: UIViewController,ImagePickerDelegate {
     }
     
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
-        print("didPress")
+        print("didPressLeftOption")
     }
     
     func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {        
