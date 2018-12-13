@@ -18,6 +18,8 @@
 		AAE4FC6B21B56920004985AB /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4FC6A21B56920004985AB /* PickerViewController.swift */; };
 		AAE4FC6F21B93E9E004985AB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4FC6E21B93E9E004985AB /* Extensions.swift */; };
 		AAE4FC7121B97879004985AB /* CustomAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4FC7021B97879004985AB /* CustomAlbum.swift */; };
+		AAE4FC7421BFF626004985AB /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4FC7321BFF626004985AB /* ImageHelper.swift */; };
+		AAE4FC7821BFF78C004985AB /* HazeRemovalFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE4FC7721BFF78C004985AB /* HazeRemovalFilter.swift */; };
 		B0EB0F8A24A06CD103E656D1 /* Pods_Camify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E3F3E2DEE0BCEBD05201AF /* Pods_Camify.framework */; };
 		DF696F16C0594D51D6A02BE0 /* Pods_CamifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71F141E923AB61852749B55 /* Pods_CamifyUITests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,8 @@
 		AAE4FC6A21B56920004985AB /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		AAE4FC6E21B93E9E004985AB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AAE4FC7021B97879004985AB /* CustomAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlbum.swift; sourceTree = "<group>"; };
+		AAE4FC7321BFF626004985AB /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		AAE4FC7721BFF78C004985AB /* HazeRemovalFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HazeRemovalFilter.swift; sourceTree = "<group>"; };
 		D09E75AC9895CB93644CE5F7 /* Pods_CamifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CamifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFDBD8167E5A9978D1D81C6C /* Pods-Camify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Camify.release.xcconfig"; path = "Pods/Target Support Files/Pods-Camify/Pods-Camify.release.xcconfig"; sourceTree = "<group>"; };
 		F71F141E923AB61852749B55 /* Pods_CamifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CamifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,8 +138,10 @@
 				AAE4FC6E21B93E9E004985AB /* Extensions.swift */,
 				AA54592A21B18A0B00E0922F /* Main.storyboard */,
 				AAE4FC7021B97879004985AB /* CustomAlbum.swift */,
+				AAE4FC7721BFF78C004985AB /* HazeRemovalFilter.swift */,
 				AA54592D21B18A0B00E0922F /* Assets.xcassets */,
 				AA54595821B196EB00E0922F /* PreviewVC.swift */,
+				AAE4FC7321BFF626004985AB /* ImageHelper.swift */,
 				AA54592F21B18A0B00E0922F /* LaunchScreen.storyboard */,
 				AA54593221B18A0B00E0922F /* Info.plist */,
 				AAE4FC6A21B56920004985AB /* PickerViewController.swift */,
@@ -321,12 +327,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Camify/Pods-Camify-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/Vivid/Vivid.framework",
+				"${BUILT_PRODUCTS_DIR}/YUCIHighPassSkinSmoothing/YUCIHighPassSkinSmoothing.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Vivid.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YUCIHighPassSkinSmoothing.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -410,7 +420,9 @@
 				AAE4FC7121B97879004985AB /* CustomAlbum.swift in Sources */,
 				AA54592721B18A0B00E0922F /* AppDelegate.swift in Sources */,
 				AA54595921B196EB00E0922F /* PreviewVC.swift in Sources */,
+				AAE4FC7821BFF78C004985AB /* HazeRemovalFilter.swift in Sources */,
 				AAE4FC6B21B56920004985AB /* PickerViewController.swift in Sources */,
+				AAE4FC7421BFF626004985AB /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

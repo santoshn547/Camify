@@ -10,9 +10,9 @@ import Foundation
 import Photos
 
 
-class CustomPhotoAlbum: NSObject {
+class CustomAlbum: NSObject {
     static let albumName = "Camify"
-    static let sharedInstance = CustomPhotoAlbum()
+    static let sharedInstance = CustomAlbum()
     
     var assetCollection: PHAssetCollection!
     
@@ -49,7 +49,7 @@ class CustomPhotoAlbum: NSObject {
     
     func createAlbum() {
         PHPhotoLibrary.shared().performChanges({
-            PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: CustomPhotoAlbum.albumName)   // create an asset collection with the album name
+            PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: CustomAlbum.albumName)   // create an asset collection with the album name
         }) { success, error in
             if success {
                 self.assetCollection = self.fetchAssetCollectionForAlbum()
@@ -61,7 +61,7 @@ class CustomPhotoAlbum: NSObject {
     
     func fetchAssetCollectionForAlbum() -> PHAssetCollection? {
         let fetchOptions = PHFetchOptions()
-        fetchOptions.predicate = NSPredicate(format: "title = %@", CustomPhotoAlbum.albumName)
+        fetchOptions.predicate = NSPredicate(format: "title = %@", CustomAlbum.albumName)
         let collection = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: fetchOptions)
         
         if let _: AnyObject = collection.firstObject {

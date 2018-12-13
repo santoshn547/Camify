@@ -35,7 +35,7 @@
 	<key>NSMicrophoneUsageDescription</key>
 	<string>To record audio</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>To select photo</string>
+	<string>To save photo</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>To select photo</string>
 	<key>UISupportedInterfaceOrientations</key>

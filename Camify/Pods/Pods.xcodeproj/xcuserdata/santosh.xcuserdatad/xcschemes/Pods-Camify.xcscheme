@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7E090975858176E18B1CA180E79F4C5A"
+               BlueprintIdentifier = "E69BCF7931C23B581E9C21ABA9452DBE"
                BuildableName = "Pods_Camify.framework"
                BlueprintName = "Pods-Camify"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7E090975858176E18B1CA180E79F4C5A"
+            BlueprintIdentifier = "E69BCF7931C23B581E9C21ABA9452DBE"
             BuildableName = "Pods_Camify.framework"
             BlueprintName = "Pods-Camify"
             ReferencedContainer = "container:Pods.xcodeproj">

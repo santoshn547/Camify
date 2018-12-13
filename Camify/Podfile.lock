@@ -1,16 +1,24 @@
 PODS:
   - ImagePicker (3.1.0)
+  - Vivid (0.9)
+  - YUCIHighPassSkinSmoothing (1.4):
+    - Vivid
 
 DEPENDENCIES:
   - ImagePicker
+  - YUCIHighPassSkinSmoothing
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ImagePicker
+    - Vivid
+    - YUCIHighPassSkinSmoothing
 
 SPEC CHECKSUMS:
   ImagePicker: db1fd7626337b2577c523bef5f499bbbe5a37079
+  Vivid: 0fde7409beac71224deb151dd78f98a5bb860497
+  YUCIHighPassSkinSmoothing: 8418fd1bf605ec22b647c57745b863b352f72097
 
-PODFILE CHECKSUM: be16ed35d317f3de1ad8181fdb859cb9fae1fb99
+PODFILE CHECKSUM: 81ce1d4a424998f70a027c35ac192ac0866e0a68
 
 COCOAPODS: 1.5.3

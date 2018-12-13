@@ -27,38 +27,55 @@ class PreviewVC: UIViewController, UIScrollViewDelegate {
     var buttonArray = [UIButton]()
     
     var buttonIndex = 0
-
     
-    var CIFilterNames = [
+    
+    
+    let Filters = [
         "Normal",
+        "applyNashvilleFilter",
+        "applyToasterFilter",
+        "apply1977Filter",
+        "applyClarendonFilter",
+        "applyHazeRemovalFilter",
         "CIPhotoEffectChrome",
         "CIPhotoEffectFade",
         "CIPhotoEffectInstant",
+        "CIPhotoEffectMono",
         "CIPhotoEffectNoir",
         "CIPhotoEffectProcess",
         "CIPhotoEffectTonal",
         "CIPhotoEffectTransfer",
-        "CISepiaTone"
-    ]
-    var filterNames = [
+        "CILinearToSRGBToneCurve"   ]
+    
+    let filterNames = [
         "Normal",
+        "Nashville",
+        "Toaster",
+        "1977",
+        "Clarendon",
+        "HazeRemoval",
         "Chrome",
         "Fade",
         "Instant",
+        "Mono",
         "Noir",
         "Process",
         "Tonal",
         "Transfer",
-        "SepiaTone"]
+        "Brighten"  ]
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let album = CustomPhotoAlbum.sharedInstance.fetchAssetCollectionForAlbum()
+        let album = CustomAlbum.sharedInstance.fetchAssetCollectionForAlbum()
         if album == nil {
-            CustomPhotoAlbum.sharedInstance.save(image: self.imagesArray[0])
+            if self.imagesArray.count == 0{
+                CustomAlbum.sharedInstance.save(image: self.image)
+            } else {
+            CustomAlbum.sharedInstance.save(image: self.imagesArray[0])
+        }
         }
         imageScrollView.delegate = self
         pageControl.numberOfPages = imagesArray.count
@@ -122,7 +139,7 @@ class PreviewVC: UIViewController, UIScrollViewDelegate {
             @available(iOS, deprecated: 12.0)
             let context = CIContext(eaglContext: openGLContext!)
             DispatchQueue.global(qos: .background).async {
-                for i in 0..<self.CIFilterNames.count {
+                for i in 0..<self.Filters.count {
                     itemCount = i
                     // Filter Button properties
                     let filterButton = UIButton(type: .custom)
@@ -134,8 +151,23 @@ class PreviewVC: UIViewController, UIScrollViewDelegate {
                     var imageForButton = UIImage()
                     if (i == 0){
                         imageForButton = self.imagesArray.first!
+                    } else if (i == 1){
+                        let filter = ImageHelper.applyNashvilleFilter(foregroundImage: coreImage!)
+                        imageForButton = UIImage.init(ciImage : filter!)
+                    } else if (i == 2){
+                        let filter = ImageHelper.applyToasterFilter(ciImage: coreImage!)
+                        imageForButton = UIImage.init(ciImage : filter!)
+                    } else if (i == 3){
+                        let filter = ImageHelper.apply1977Filter(ciImage: coreImage!)
+                        imageForButton = UIImage.init(ciImage : filter!)
+                    } else if (i == 4){
+                        let filter = ImageHelper.applyClarendonFilter(foregroundImage: coreImage!)
+                        imageForButton = UIImage.init(ciImage : filter!)
+                    } else if (i == 5){
+                        let filter = ImageHelper.applyHazeRemovalFilter(image: coreImage!)
+                        imageForButton = UIImage.init(ciImage : filter!)
                     } else {
-                        let filter = CIFilter(name: "\(self.CIFilterNames[i])" )
+                        let filter = CIFilter(name: "\(self.Filters[i])" )
                         filter!.setDefaults()
                         filter!.setValue(coreImage, forKey: kCIInputImageKey)
                         let filteredImageData = filter!.value(forKey: kCIOutputImageKey) as! CIImage
@@ -150,6 +182,8 @@ class PreviewVC: UIViewController, UIScrollViewDelegate {
                         self.filtersScrollView.addSubview(filterButton)
                         //Label properties
                         let filterNameLabel = UILabel()
+                        
+                        
                         filterNameLabel.frame = CGRect(x:labelXCoord,y: labelYCoord,width: buttonWidth,height: labelHeight)
                         filterNameLabel.text = self.filterNames[i]
                         filterNameLabel.textAlignment = .center
@@ -169,7 +203,7 @@ class PreviewVC: UIViewController, UIScrollViewDelegate {
                 
                 // Resize Scroll View
                 DispatchQueue.main.async {
-                    self.filtersScrollView.contentSize = CGSize(width: buttonWidth * CGFloat(itemCount+2),height: 115)
+                    self.filtersScrollView.contentSize = CGSize(width: buttonWidth * CGFloat(self.Filters.count+2),height: 115)
                 }
             }
             
@@ -183,6 +217,7 @@ class PreviewVC: UIViewController, UIScrollViewDelegate {
         for label in labelArray{
             label.textColor = UIColor(hexString: "#999DA2")
         }
+        
         labelArray[tag].textColor = UIColor.white
         if (tag == 0) {
             // Remove the filtered images and set normal images.
@@ -191,6 +226,76 @@ class PreviewVC: UIViewController, UIScrollViewDelegate {
                 imageView.image = self.imagesArray[i]
             }
 
+        } else if (tag == 1){
+            self.filteredImagesArray.removeAll()
+            for i in 0..<self.imagesArray.count{
+                let coreImage  =  CIImage(image: self.imagesArray[i])
+                DispatchQueue.global(qos: .background).async {
+                    let filter = ImageHelper.applyNashvilleFilter(foregroundImage: coreImage!)
+                    let filteredImage = UIImage.init(ciImage: filter!)
+                    let imageView  = self.imageViewArray[i]
+                    self.filteredImagesArray.append(filteredImage)
+                    DispatchQueue.main.async {
+                        imageView.image = filteredImage
+                    }
+                }
+            }
+        } else if (tag == 2){
+            self.filteredImagesArray.removeAll()
+            for i in 0..<self.imagesArray.count{
+                let coreImage  =  CIImage(image: self.imagesArray[i])
+                DispatchQueue.global(qos: .background).async {
+                    let filter = ImageHelper.applyToasterFilter(ciImage: coreImage!)
+                    let filteredImage = UIImage.init(ciImage: filter!)
+                    let imageView  = self.imageViewArray[i]
+                    self.filteredImagesArray.append(filteredImage)
+                    DispatchQueue.main.async {
+                        imageView.image = filteredImage
+                    }
+                }
+            }
+        } else if (tag == 3){
+            self.filteredImagesArray.removeAll()
+            for i in 0..<self.imagesArray.count{
+                let coreImage  =  CIImage(image: self.imagesArray[i])
+                DispatchQueue.global(qos: .background).async {
+                    let filter = ImageHelper.apply1977Filter(ciImage: coreImage!)
+                    let filteredImage = UIImage.init(ciImage: filter!)
+                    let imageView  = self.imageViewArray[i]
+                    self.filteredImagesArray.append(filteredImage)
+                    DispatchQueue.main.async {
+                        imageView.image = filteredImage
+                    }
+                }
+            }
+        } else if (tag == 4){
+            self.filteredImagesArray.removeAll()
+            for i in 0..<self.imagesArray.count{
+                let coreImage  =  CIImage(image: self.imagesArray[i])
+                DispatchQueue.global(qos: .background).async {
+                    let filter = ImageHelper.applyHazeRemovalFilter(image: coreImage!)
+                    let filteredImage = UIImage.init(ciImage: filter!)
+                    let imageView  = self.imageViewArray[i]
+                    self.filteredImagesArray.append(filteredImage)
+                    DispatchQueue.main.async {
+                        imageView.image = filteredImage
+                    }
+                }
+            }
+        } else if (tag == 5){
+            self.filteredImagesArray.removeAll()
+            for i in 0..<self.imagesArray.count{
+                let coreImage  =  CIImage(image: self.imagesArray[i])
+                DispatchQueue.global(qos: .background).async {
+                    let filter = ImageHelper.applyClarendonFilter(foregroundImage: coreImage!)
+                    let filteredImage = UIImage.init(ciImage: filter!)
+                    let imageView  = self.imageViewArray[i]
+                    self.filteredImagesArray.append(filteredImage)
+                    DispatchQueue.main.async {
+                        imageView.image = filteredImage
+                    }
+                }
+            }
         } else {
             // Set same filters to all images.
             // Add filters for each button
@@ -203,7 +308,7 @@ class PreviewVC: UIViewController, UIScrollViewDelegate {
             for i in 0..<self.imagesArray.count{
                 let coreImage  =  CIImage(image: self.imagesArray[i])
                 DispatchQueue.global(qos: .background).async {
-            let filter = CIFilter(name: "\(self.CIFilterNames[tag])" )
+            let filter = CIFilter(name: "\(self.Filters[tag])" )
             filter!.setDefaults()
             filter!.setValue(coreImage, forKey: kCIInputImageKey)
             let filteredImageData = filter!.value(forKey: kCIOutputImageKey) as! CIImage
@@ -287,8 +392,9 @@ class PreviewVC: UIViewController, UIScrollViewDelegate {
         @available(iOS, deprecated: 12.0)
         let context = CIContext(eaglContext: openGLContext!)
         DispatchQueue.global(qos: .background).async {
-            for i in 0..<self.CIFilterNames.count {
+            for i in 0..<self.Filters.count {
                 itemCount = i
+                
                 
                 // Button properties
                 let filterButton = UIButton(type: .custom)
@@ -299,11 +405,26 @@ class PreviewVC: UIViewController, UIScrollViewDelegate {
                 filterButton.clipsToBounds = true
                 self.buttonArray.append(filterButton)
                 var imageForButton = UIImage()
+                
                 if (i == 0){
                     imageForButton = self.originalImage.image!
+                } else if (i == 1){
+                    let filter = ImageHelper.applyNashvilleFilter(foregroundImage: coreImage!)
+                    imageForButton = UIImage.init(ciImage : filter!)
+                } else if (i == 2){
+                    let filter = ImageHelper.applyToasterFilter(ciImage: coreImage!)
+                    imageForButton = UIImage.init(ciImage : filter!)
+                } else if (i == 3){
+                    let filter = ImageHelper.apply1977Filter(ciImage: coreImage!)
+                    imageForButton = UIImage.init(ciImage : filter!)
+                } else if (i == 4){
+                    let filter = ImageHelper.applyClarendonFilter(foregroundImage: coreImage!)
+                    imageForButton = UIImage.init(ciImage : filter!)
+                } else if (i == 5){
+                    let filter = ImageHelper.applyHazeRemovalFilter(image: coreImage!)
+                    imageForButton = UIImage.init(ciImage : filter!)
                 } else {
-                    
-                    let filter = CIFilter(name: "\(self.CIFilterNames[i])" )
+                    let filter = CIFilter(name: "\(self.Filters[i])" )
                     filter!.setDefaults()
                     filter!.setValue(coreImage, forKey: kCIInputImageKey)
                     let filteredImageData = filter!.value(forKey: kCIOutputImageKey) as! CIImage
@@ -336,7 +457,7 @@ class PreviewVC: UIViewController, UIScrollViewDelegate {
             
             // Resize Scroll View
             DispatchQueue.main.async {
-                self.filtersScrollView.contentSize = CGSize(width: buttonWidth * CGFloat(itemCount+2),height: 115)
+                self.filtersScrollView.contentSize = CGSize(width: buttonWidth * CGFloat(self.Filters.count+2),height: 115)
             }
         }
     }
@@ -358,14 +479,13 @@ class PreviewVC: UIViewController, UIScrollViewDelegate {
     @IBAction func savePicButton(_ sender: Any) {
         // Save the image into camera roll
         if imageViewArray.count > 1{
-            for image in filteredImagesArray{
-                CustomPhotoAlbum.sharedInstance.save(image: image)
-//                UIImageWriteToSavedPhotosAlbum(images, nil, nil, nil)
+            for i in 0..<filteredImagesArray.count{
+                CustomAlbum.sharedInstance.save(image: filteredImagesArray[i])
             }
         } else {
-            CustomPhotoAlbum.sharedInstance.save(image: imageToFilter.image!)
-//        UIImageWriteToSavedPhotosAlbum(imageToFilter.image!, nil, nil, nil)
+            CustomAlbum.sharedInstance.save(image: imageToFilter.image!)
         }
+        
         let alert = UIAlertView(title: "Filters",
                                 message: "Your image has been saved to Photo Library",
                                 delegate: nil,
